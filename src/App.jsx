@@ -1,4 +1,5 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import BlogDetails from "./BlogDetails";
 import Create from "./Create";
 import Home from "./Home";
 import Navbar from "./Navbar";
@@ -15,6 +16,8 @@ const App = ()=>{
         </Route>
         <Route path = "/create" element ={<Create/>}>
 
+        </Route>
+        <Route path = "/blogs/:id" element ={<BlogDetails/>}>
         </Route>
         </Routes> 
          
