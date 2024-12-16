@@ -95,4 +95,32 @@
     padding: 8px;
     border-radius: 8px;
     cursor:pointer;
+  }  
+  .blog-details button {
+    background-color: #f1356d;
+    color: #fff;
+    border: 0;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    
+  }
+  .blog-details button:hover {
+    background-color: #f49b8e;
+    color: #fff;
+    border: 0;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    
+  }
+
+  .blog-body {
+    font-size: 15px;
+    font-weight: lighter;
+
+  }
+  .blog-author p {
+    font-size: 15px;
+     font-weight: bold;
   }

@@ -1,11 +1,15 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import useFetch from './useFetch';
 
 const BlogDetails = () => {
 
   const {id} = useParams();
+  const navigate = useNavigate();
   const {data:blog,error,isLoading} = useFetch("http://localhost:8000/blogs/"+id);
+  const handleClick =()=>{
+    fetch("http://localhost:8000/blogs/"+blog.id,{method:'delete'}).then(()=>{navigate(-1)})
+  }
   return (
     <div>
       <h2 className="blog-details">
@@ -15,8 +19,9 @@ const BlogDetails = () => {
         {blog &&(
           <article>
             <h2>{blog.title}</h2>
-            <p>Written by {blog.author}</p>
-            <p>{blog.body}</p>
+            <p className='blog-author'>Written by {blog.author}</p>
+            <p className='blog-body'>{blog.body}</p>
+            <button onClick={handleClick}>Delete  </button>
           </article>
         )}
 

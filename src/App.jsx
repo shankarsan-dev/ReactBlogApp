@@ -3,6 +3,7 @@ import BlogDetails from "./BlogDetails";
 import Create from "./Create";
 import Home from "./Home";
 import Navbar from "./Navbar";
+import NotFound from "./NotFound";
 const App = ()=>{
   const title = "Welcome to my blog!"
 
@@ -19,7 +20,10 @@ const App = ()=>{
         </Route>
         <Route path = "/blogs/:id" element ={<BlogDetails/>}>
         </Route>
+        <Route path = '*' element={<NotFound/>}>
+        </Route>
         </Routes> 
+      
          
         </div>
       </div>
